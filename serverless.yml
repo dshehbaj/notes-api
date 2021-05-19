@@ -39,12 +39,6 @@ provider:
       Resource: "arn:aws:dynamodb:us-west-1:*:*"
 
 functions:
-  hello:
-    handler: handler.hello
-    events:
-      - http:
-        path: hello
-        method: get
   create:
     handler: create.main
     event:
