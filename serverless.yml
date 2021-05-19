@@ -41,19 +41,25 @@ provider:
 functions:
   create:
     handler: create.main
-    event:
+    events:
       - http:
           path: notes
           method: post
   get:
     handler: get.main
-    event:
+    events:
       - http:
           path: notes/{id}
           method: get
   list:
     handler: list.main
-    event:
+    events:
       - http:
           path: notes
           method: get
+  update:
+    handler: update.main
+    events:
+      - http:
+          path: notes/{id}
+          method: put
