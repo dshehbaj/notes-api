@@ -45,3 +45,9 @@ functions:
       - http:
           path: notes
           method: post
+  get:
+    handler: get.main
+    event:
+      - http:
+          path: notes/{id}
+          method: get
